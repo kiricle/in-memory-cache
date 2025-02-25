@@ -17,3 +17,7 @@ func (c *Cache) Set(key string, value interface{}) {
 func (c *Cache) Get(key string) interface{} {
 	return c.cache[key]
 }
+
+func (c *Cache) Delete(key string) {
+	delete(c.cache, key)
+}
